@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Assets/bat.png" type="Texture" id=2]
 [ext_resource path="res://Enemy/Bat.gd" type="Script" id=3]
+[ext_resource path="res://Enemy/Turret.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Player_Container.gd" type="Script" id=12]
 
 [sub_resource type="AtlasTexture" id=1]
@@ -104,6 +105,19 @@ shape = SubResource( 5 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Enemy_Container/Bat"]
 enabled = true
+
+[node name="Turret" parent="Enemy_Container" instance=ExtResource( 4 )]
+position = Vector2( 758.251, -33.5227 )
+rotation = -1.5708
+
+[node name="Turret2" parent="Enemy_Container" instance=ExtResource( 4 )]
+position = Vector2( 2790.69, 437.381 )
+
+[node name="Turret3" parent="Enemy_Container" instance=ExtResource( 4 )]
+position = Vector2( 1413.07, 300.13 )
+
+[node name="Turret4" parent="Enemy_Container" instance=ExtResource( 4 )]
+position = Vector2( 2334.82, 55.5402 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 9 )
